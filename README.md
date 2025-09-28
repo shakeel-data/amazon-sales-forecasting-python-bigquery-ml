@@ -644,7 +644,7 @@ ORDER BY p.category, product_revenue DESC;
 ```sql
 WITH customer_metrics AS (
     SELECT 
-        c.Custkey,
+        c.Custkey, 
         c.customer_name,
         -- Recency: Days since last purchase
         DATE_DIFF(CURRENT_DATE(), MAX(o.order_date), DAY) as days_since_last_purchase,
